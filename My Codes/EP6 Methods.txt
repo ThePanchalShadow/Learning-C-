@@ -1,0 +1,82 @@
+internal class Main
+{
+    // EP 6 (1/3)
+
+    static void alien()
+    {
+        String[] elf_names = {"Kreacher","Gimbel","Winky","Dobby","Hermey","Elnora","Elvene","Elvinia","Elwyn","Ermina"};
+        Random rng = new Random();
+        int Name = rng.Next(0,elf_names.Length);
+        int age = rng.Next(18,500);
+        Console.WriteLine("Hi, My name is " + elf_names[Name] + "and I'm "+age+"years old");
+        Console.WriteLine("Oh, and I an Elf");
+    }
+
+    // EP 6 (2/3)
+    
+    static void multiply(int x,int y)
+    {
+        int mul = x*y;
+        Console.WriteLine("Multiplication of "+x+" and "+y+" is "+mul);
+    }
+
+    // EP 6 (3/3)
+    
+    static int multiply2(int x,int y)
+    {
+        int mul = x*y;
+        return mul;
+    }
+
+    //EP 6 Exercise
+    
+    static int wordCount(string x)
+    {
+        int WC = x.Split(' ').Length;
+        return WC;
+    }
+
+    Main method 
+    {
+        // EP 6 (1/3)
+        
+        alien();
+        Console.WriteLine("-------------");
+        alien();
+        Console.WriteLine("-------------");
+        alien();
+        Console.WriteLine("-------------");
+        alien();
+
+        //EP 6 (2/3)
+
+        multiply(10,20);
+        multiply(2,38);
+        multiply(2,4);
+        multiply(5,7);
+
+        //EP 6 (3/3)
+
+        int answer = multiply2(10,20);
+        
+        if (answer%2==0)
+        {
+            Console.WriteLine(answer + " is an even number");
+        }
+        else
+        {
+            Console.WriteLine(answer+" is an odd number");
+        }
+
+        //EP 6 Exercise
+
+        Console.WriteLine("Enter a Sentace and code will tell the words in it: ");
+        string sentace =  Console.ReadLine();    
+
+        int WC = wordCount(sentace);
+
+        Console.WriteLine("Your sentace has "+WC+" Words");
+    }
+    //Wait before closing
+    Console.ReadKey();
+}

@@ -1,0 +1,32 @@
+//EP 2 (1/2)
+Console.WriteLine("What is your name?");
+string userName = Console.ReadLine();
+Console.WriteLine("Hello " + userName + ", nice to meet you." );
+
+//EP 2 (2/2)
+double num1;
+double num2;
+Console.Write("Enter a Number: ");
+num1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Enter a second Number: ");
+num2 = Convert.ToDouble(Console.ReadLine());
+double result = num1 * num2;
+Console.WriteLine("Multiplication is: "+ result);
+
+//EP 2 Exercise
+double num1;
+double num2;
+
+Console.Write("Enter First Number: ");
+num1 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter Second Number: ");
+num2 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Enter Third Number: ");
+
+Double num3 = Convert.ToDouble(Console.ReadLine());
+double result = (num1 + num2 + num3)/2;
+Console.WriteLine("Average is: "+ result);
+//Wait before closing
+Console.ReadKey();

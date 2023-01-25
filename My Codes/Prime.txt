@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+        static void prime (int n)
+        {
+            bool Flag = true;
+            for (int i = 2; i < n; i++)
+            {
+                if(n%i==0)
+                {
+                    if(n==2)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Number is not prime");
+                        Flag = false;
+                        break;
+                    }
+                }
+            }
+            if(Flag)
+            {
+                Console.WriteLine("Number is Prime");
+            }
+        }
+        static bool isprime (int n)
+        {
+            bool Flag = true;
+            for (int i = 2; i < n; i++)
+            {
+                if(n%i==0)
+                {
+                    if(n==2)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Number is not prime");
+                        Flag = false;
+                        return false;
+                    }
+                }
+            }
+            if(Flag)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Number to Check if Prime or not");
+            int n = Convert.ToInt32(Console.ReadLine());
+            prime(n);
+
+            bool isPrime = isprime(n);
+
+            Console.WriteLine(isPrime);
+
+            //Wait before closing
+            Console.ReadKey();
+        }
+    }
+}

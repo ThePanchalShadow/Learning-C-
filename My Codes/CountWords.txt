@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+        static void words(string num1)
+        {
+            int num3;           
+            string[] num2 = num1.Split(' ');
+
+            num3 = num2.Length;
+            Console.WriteLine("There were total "+num3+" Words in the Sentance you Entered");
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Sentance and see how many Words it had:");           
+            string? num1 = Console.ReadLine(); 
+            words(num1);
+            
+            //wait before closing
+            Console.ReadLine();
+        }
+
+    }
+}

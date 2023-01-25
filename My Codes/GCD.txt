@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static int GCD(int a, int b)
+        {
+            if (b != 0)
+                return GCD(b, a % b);
+            else
+                return a;
+        }
+        static void Main(string[] args)
+        {   
+            //Recursion (3/4)
+            //Write a Program to Find G.C.D of two numbers entered by user Using Recursion
+            Console.WriteLine("Enter First number for GCD/HCF: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter First number for GCD/HCF: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int answer = GCD(a,b);
+            Console.WriteLine("GCD of " + a +" and "+b+" is " + answer);
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

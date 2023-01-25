@@ -1,0 +1,22 @@
+using System;
+
+namespace TicketReloader
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numTickets = 4; // Number of tickets
+            int reloadTime = 55; // Time to reload each ticket in minutes
+
+            // Calculate the total reload time in hours and minutes
+            int totalMinutes = numTickets * reloadTime;
+            int hours = totalMinutes / 60;
+            int minutes = totalMinutes % 60;
+            //minutes = minutes-15;
+
+            Console.WriteLine("Total reload time: " + hours + " hours " + minutes + " minutes");
+            Console.ReadLine();
+        }
+    }
+}

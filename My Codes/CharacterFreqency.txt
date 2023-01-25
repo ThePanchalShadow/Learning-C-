@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        
+        
+        static void Main(string[] args)
+        {   
+            //String (1/10)
+            //Write a Program to Find the Frequency of given Character by user in a String
+
+            Console.WriteLine("Enter a String ");
+            string? test = Console.ReadLine();
+            Console.WriteLine("Enter the Charater to see it's Frequency in string ");
+            int count = 0;
+            char? value = Convert.ToChar(Console.ReadLine());
+            
+            for (int i = 0; i < test.Length; i++)
+            {
+                int check = test[i].CompareTo(value);
+                if(check==0)
+                {
+                    count++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            Console.WriteLine(value+" was present in this string for "+count+" Times");
+
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {         
+            Console.WriteLine("Enter First number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Second number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Orignal Numbers First: "+a +" Second: "+ b);
+            //int t = a; 
+            a = b + a;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine("Swapped Numbers First: " + a + " Second: " + b);
+            
+            //Wait before closing
+            Console.ReadKey();
+        }
+    }
+}

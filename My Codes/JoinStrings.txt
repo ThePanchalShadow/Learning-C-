@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        
+        
+        static void Main(string[] args)
+        {   
+            //String (5/10)
+            //Write a Program to Concatenate (join) Two Strings entered by user
+            Console.WriteLine("Enter Two Diffrent Strings and we'll Join it: ");
+            Console.WriteLine("Enter First string: ");
+            string? str1 = Console.ReadLine();
+            Console.WriteLine("Enter Second string: ");
+            string? str2 = Console.ReadLine();
+            string str4 = " ";
+            string str3 = string.Concat(str1,str4,str2);
+
+            Console.WriteLine("Your Combined String is: "+str3);
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        
+        
+        static void Main(string[] args)
+        {   
+            //String (2/10)
+            //Write a Program to Find the Number of Vowels, Consonants, Digits and White Spaces in a String
+
+            Console.WriteLine("Enter a String ");
+            string? test = Console.ReadLine();
+            int Vowels, Consonants, Digits, WhiteSpaces;
+            Vowels = Consonants = Digits = WhiteSpaces = 0;
+            
+            for (int i = 0; i < test.Length; i++)
+            {
+                
+                if(test[i] == 'a' || test[i] == 'e' || test[i] == 'i' || test[i] == 'o' || test[i] == 'u')
+                {
+                    Vowels++;
+                }
+                else if(test[i]>='a'&& test[i]<='z')
+                {
+                    Consonants++;
+                }
+                else if(test[i]==' ')
+                {
+                    WhiteSpaces++;
+                }
+                else if(test[i]=='0'&& test[i]<='9')
+                {
+                    Digits++;
+                }
+            }
+            Console.WriteLine("In Given String there are " +Vowels+" Vowels " +Consonants+" Consonants " +Digits+" Digits and " +WhiteSpaces+" WhiteSpaces");
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

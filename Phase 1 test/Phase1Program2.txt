@@ -1,0 +1,53 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        //Test of Phase 1
+        
+        //Write a C# program that converts a distance in kilometers into meters, and then displays the result. Input can be a decimal number. After the result gets displayed, take the number and print the sum of it. For example, if the result is 3794 then the next output should be 23.
+        
+        double km;
+        
+        //getting KM value from User
+        Console.Write("Enter KM to cinvert in Meter:- ");
+        
+        km = Convert.ToDouble(Console.ReadLine());
+        //Converting KM to Meters
+        double meter = km*1000;
+        Console.WriteLine("Entered KM is "+ km +" and after coverting into Meters it is "+meter);
+
+        //Perfroming Summation of each digit in Meter
+        int sum = 0;
+        while(meter>0)
+        {
+            int R = Convert.ToInt32(meter%10);
+            sum += R;
+            Console.WriteLine(sum);
+            Console.WriteLine(R);
+            if(meter>=0&&meter<=9)
+            {
+                break;
+            }    
+            else meter = meter/10;
+        } 
+
+        Console.WriteLine("Sum of each digiti in meters is:- "+sum);
+        // To stop terminal from closing
+        Console.ReadLine();
+    }
+}

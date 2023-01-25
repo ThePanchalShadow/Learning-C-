@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static int power(int b, int e)
+        {
+            if(e<=1)
+            {
+                return b;
+            }
+            else{
+                e--;
+                return b=b*power(b,e);
+            }
+        }
+        static void Main(string[] args)
+        {    
+            //Recursion (4/4)
+            //Write a Program that calculates the power of a number using recursion where base and exponent is entered by the user.
+
+
+            Console.WriteLine("Enter Base Value: ");
+            int Base = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Exponent Value: ");
+            int Exponent = Convert.ToInt32(Console.ReadLine());
+            int answer = power(Base,Exponent);
+            Console.WriteLine(Exponent+" of " + Base +" is " + answer);
+
+
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,70 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        //Test of Phase 1
+        //Write a C# program to count how many times a given number appeared in the array.
+        
+        int n;
+        //Takes amount of number from user
+        Console.Write("Enter the amount of number you want to add:- ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        List<int> Nums = new List<int>();
+        
+        Console.WriteLine("Enter "+ n +" numbers and press enter after each number");
+
+        // Takes number in a list from user
+        for (int i = 0; i < n; i++)
+        {
+            Nums.Add(Convert.ToInt32(Console.ReadLine()));
+        }
+
+        //asks for number to search in list
+        Console.Write("Enter the Number to find and count it: ");
+        int search = Convert.ToInt32(Console.ReadLine());
+        int count=0;
+
+        foreach (int item in Nums)
+        {
+            int num = item;
+            //checks if integer is a single digit
+            if(num>=0&&num<=9)
+            {
+                count++;    
+            }
+            //it will increment count each time num is equal to search value
+            else
+            {
+                while(num>0)
+                {
+                    //seprates multi digit number and checks if it is equal to search
+                    if(num%10==search)count++;
+                    if(num>=0&&num<=9)
+                    {
+                        break;
+                    }    
+                    else num = num/10;
+                } 
+            }
+        }
+        Console.WriteLine("The Number "+search+" was "+count+" Times in the list you gave");
+        // To stop terminal from closing
+        Console.ReadLine();
+    }
+}

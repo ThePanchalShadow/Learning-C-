@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static double[] takeNumbers(int n)
+        {
+            double[] values = new double[n];
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.WriteLine("Enter a Number");
+                values[i] = Convert.ToDouble(Console.ReadLine());
+            }
+            return values;
+        }
+        static double sumArray(double[] array)
+        {
+            double sum = 0;
+            for (int i = 0; i < array.Length ; i++)
+            {
+                sum = array[i] + sum;
+            }
+            return sum;
+        }
+
+        static double sigma(double[] array,double mean)
+        {
+            double sigma = 0;
+            for (int i = 0; i < array.Length ; i++)
+            {
+                double a =  array[i]-mean;
+                double root = Math.Pow(a,2);
+                sigma = root + sigma;
+            }
+            return sigma;
+        }
+        
+        static void Main(string[] args)
+        {   
+            //Array (3/4)
+            //Write a Program that calculates the standard deviation of 10 data using arrays
+            
+            Console.WriteLine("Enter amount of numbers for standard deviation:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter " +n+ " Diffrent numbers to get thier standard deviation");
+            double[] values = takeNumbers(n);
+            double sum = sumArray(values);
+            Console.WriteLine("Sum of values "+ sum);
+            double Mean = sum/(n);
+            Console.WriteLine("Succefully found mean "+Mean);
+            double Sigma = sigma(values,Mean);
+            Console.WriteLine("Succefully found Sigma "+ Sigma);
+            double root = Sigma/(n-1);
+            Console.WriteLine("Got root value of sigma "+ root);
+            double S = Math.Sqrt(root);
+            Console.WriteLine("The standard Deviation of " +n+" values is "+ S);
+
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

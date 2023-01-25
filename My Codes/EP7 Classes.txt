@@ -1,0 +1,113 @@
+// EP 7 (1/2)
+class cat
+{
+    // we succefully crated a class now we can describe about cat
+    public string? name;
+    public int age;
+    //we gave cat a name and age
+
+    public void meow()
+    {
+        Console.WriteLine(name + " Says Meow!");
+    }
+    //here we showed what our cat can do
+}
+
+// EP 7 (2/2)
+
+class Wizard
+{
+    public string? name;
+    public string? favspell;
+    public int SpellSlots;
+    public int experience;
+    public static int count;
+
+    public Wizard(string _name, string _favspell)
+    {
+        name = _name;
+        favspell = _favspell;
+        SpellSlots = 2;
+        experience = 0;
+    }
+
+    public void castspell()
+    {
+        if (SpellSlots>0)
+        {
+            Console.WriteLine(name + " casts " + favspell);
+            SpellSlots--;
+            Console.WriteLine("spellslots left "+SpellSlots);
+            experience += 3;
+            Console.WriteLine("Experince of "+name+" is "+experience);
+        }
+        else
+        {
+            Console.WriteLine(name +" is out of Spellslots");
+        }
+    }
+
+    public void Meditate()
+    {
+        Console.WriteLine(name + " is Meditating to regain spells");
+        SpellSlots = 2;
+    }
+}
+
+internal class Main
+{
+    // EP 7 (1/2)
+
+    cat cat01 = new cat();
+    //here we created first instance of class cat
+    cat01.name = "cat stevens";
+    cat01.age=1;
+    //now we can access properties of class cat
+    cat01.meow();
+    //accessed a method from class cat
+
+    cat cat02 = new cat();
+    //Created another cat
+    cat02.name = "Meow Cyrus";
+    cat02.age = 12;
+    //used variables for this cat
+    cat02.meow();
+
+    //EP 7 (2/2)
+
+    Wizard wizard01 = new Wizard("Parry Hopper","expecto patronum");
+    Wizard wizard02 = new Wizard("Glindalf Merlinson","AbraCadabra");
+    
+    wizard01.castspell();
+    
+    wizard02.castspell();
+    
+    wizard01.castspell();
+    
+    wizard02.castspell();
+    
+    wizard02.Meditate();
+    
+    wizard01.Meditate();
+    
+    wizard02.castspell();
+    
+    wizard01.castspell();
+    
+    wizard02.castspell();
+    
+    wizard01.castspell();
+
+    int length = 6;
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            Console.Write("* ");
+        }
+        Console.WriteLine("");
+    }
+    //Wait before closing
+    Console.ReadKey(); 
+
+}

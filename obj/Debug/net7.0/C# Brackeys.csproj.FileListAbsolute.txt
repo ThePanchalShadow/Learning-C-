@@ -1,0 +1,15 @@
+D:\Jigar\C# Brackeys\bin\Debug\net7.0\C# Brackeys.exe
+D:\Jigar\C# Brackeys\bin\Debug\net7.0\C# Brackeys.deps.json
+D:\Jigar\C# Brackeys\bin\Debug\net7.0\C# Brackeys.runtimeconfig.json
+D:\Jigar\C# Brackeys\bin\Debug\net7.0\C# Brackeys.dll
+D:\Jigar\C# Brackeys\bin\Debug\net7.0\C# Brackeys.pdb
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.csproj.AssemblyReference.cache
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.AssemblyInfoInputs.cache
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.AssemblyInfo.cs
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.csproj.CoreCompileInputs.cache
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.dll
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\refint\C# Brackeys.dll
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.pdb
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\C# Brackeys.genruntimeconfig.cache
+D:\Jigar\C# Brackeys\obj\Debug\net7.0\ref\C# Brackeys.dll

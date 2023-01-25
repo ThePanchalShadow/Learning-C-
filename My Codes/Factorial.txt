@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static int factorial(int f)
+        {
+            if(f==1)
+            {
+                return f;
+            }
+            else{
+                return f = f * factorial(f-1);
+            }
+        }
+        static void Main(string[] args)
+        {   
+            //Recursion (2/4)
+            //Write a Program to Calculate Factorial of a Number Using Recursion
+            Console.WriteLine("Enter Integer to Calculate it's factorial: ");
+            int factor = Convert.ToInt32(Console.ReadLine());
+            int answer = factorial(factor);
+            Console.WriteLine("Factorial of " + factor +" is " + answer);
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

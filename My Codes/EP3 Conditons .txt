@@ -1,0 +1,77 @@
+//EP 3 (1/2)
+Console.WriteLine("Welcome! Ticket is 5$. Please insert the cash");
+int cash = Convert.ToInt32(Console.ReadLine()); // Stores amount of cash
+if (cash<5)
+{
+    int extra = 5 - cash;
+    Console.WriteLine("You need "+ extra +" more Dollar to get a ticket");
+}    
+else if(cash==5)
+{
+    Console.WriteLine("Here is your Ticket Thank you!");
+}
+else
+{
+    int change = cash - 5;
+    Console.WriteLine("Here is your Tiket and your change of "+ change +" Dollars 5Thank you");
+}
+
+//EP 3 (2/2)
+Switch case
+Console.WriteLine("Enter Number Between 1 to 5");
+int num5 = Convert.ToInt32(Console.ReadLine());
+
+switch (num5){
+    case 1: 
+        Console.WriteLine("One");
+        break;
+    case 2: 
+        Console.WriteLine("Two");
+        break;
+    case 3: 
+        Console.WriteLine("Three");
+        break;        
+    case 4: 
+        Console.WriteLine("Four");
+        break;
+    case 5: 
+        Console.WriteLine("Five");
+        break;
+    default: 
+        Console.WriteLine("Number not Between 1 to 5");
+        break;        
+}
+
+//EP 3 Exercise
+Console.Write("1 + 5 + 4 = ");
+int num4 = Convert.ToInt32(Console.ReadLine());
+
+if(num4==10){
+    Console.WriteLine("Correct");
+}
+else
+{
+    Console.WriteLine("Wrong! Correct is 10");
+}
+Console.Write("10/5 = ");
+int num6 = Convert.ToInt32(Console.ReadLine());
+
+if(num6==2){
+    Console.WriteLine("Correct");
+}
+else
+{
+    Console.WriteLine("Wrong! Correct is 2");
+}
+Console.Write("(1 + 5 + 4 + 2)/4 = ");
+int num7 = Convert.ToInt32(Console.ReadLine());
+
+if(num7==3){
+    Console.WriteLine("Correct");
+}
+else
+{
+    Console.WriteLine("Wrong! Correct is 3");
+}
+//Wait before closing
+Console.ReadKey();

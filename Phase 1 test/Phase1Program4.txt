@@ -1,0 +1,89 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+
+class Solution
+{
+    //This Fumction will convert one given number to word although number has to be as type char
+    public static void word(char R)
+    {
+        if(R=='1')
+        {
+            Console.Write(" One ");
+        }
+        else if(R=='2')
+        {
+            Console.Write(" Two ");
+        }
+        else if(R=='3')
+        {
+            Console.Write(" Three ");
+        }
+        else if(R=='4')
+        {
+            Console.Write(" Four ");
+        }
+        else if(R=='5')
+        {
+            Console.Write(" Five ");
+        }
+        else if(R=='6')
+        {
+            Console.Write(" Six ");
+        }
+        else if(R=='7')
+        {
+            Console.Write(" Seven ");
+        }
+        else if(R=='8')
+        {
+            Console.Write(" Eight ");
+        }
+        else if(R=='9')
+        {
+            Console.Write(" Nine ");
+        }
+        else
+        {
+            Console.Write(" Zero ");
+        }
+    }
+    public static void Main(string[] args)
+    {
+        //Test of Phase 1
+        //Write a C# program that converts a distance in kilometers into meters, and then displays the result. Input can be a decimal number. After the result gets displayed, take the number and print the sum of it. For example, if the result is 3794 then the next output should be 23.
+        string number;
+        Console.Write("Enter Number to convert in Words:- ");
+        //Gets Value from user
+        number = Console.ReadLine();
+
+        //Counts amount of words
+        int count = number.Length;
+        
+        //converts number to words
+        for(int i = 0;i<count;i++)
+        {
+            char R = number.ElementAt(i);
+            //it will check if there is a string in entered value
+            if(!char.IsLetterOrDigit(R) || char.IsLetter(R))
+            {
+                Console.WriteLine("You entered any alphabate or Special Charcter instead of Numbers");
+                break;
+            }
+            word(R);
+        }
+        // To stop terminal from closing
+        Console.ReadLine();
+    }
+}

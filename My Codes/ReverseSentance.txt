@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program
+{
+    internal class Program
+    {
+        static void words(string num1)
+        {
+            string num3 = "";           
+            string[] num2 = num1.Split(' ');
+
+            for (int i = num2.Length - 1 ; i >= 0 ; i--)
+            {
+                num3 = num3 + num2[i] + " ";
+            }
+            Console.WriteLine(num3);
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Sentance and It will be reversed:");           
+            string? num1 = Console.ReadLine(); 
+            words(num1);
+            
+            //wait before closing
+            Console.ReadLine();
+        }
+    }
+}

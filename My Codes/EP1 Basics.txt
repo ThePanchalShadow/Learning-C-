@@ -1,0 +1,12 @@
+//EP 1
+Console.Title = "Story";
+Console.WriteLine("That's my Book");
+Console.ReadLine();
+Console.WriteLine("I'm Ruke. God of Death!");
+Console.ReadLine();
+Console.WriteLine("Keep the Book Play with it");
+Console.ReadLine();
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("For Entertainment.");
+//Wait before closing
+Console.ReadKey();

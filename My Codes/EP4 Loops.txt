@@ -1,0 +1,67 @@
+// EP 4 (1/3)
+Console.WriteLine("1 to 10 where i starts at 0");
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i+1);
+}
+Console.WriteLine("1 to 10 where i starts at 1");
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("10 to 1 where i starts at 10");
+for (int i = 10; i > 0; i--)
+{
+    Console.WriteLine(i);
+}
+
+//EP 4 (2/3)
+Console.WriteLine("Enter Number to Print: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 0; i < n; i++)
+{
+    double result = Math.Pow(2,i);
+    Console.WriteLine(result);
+}
+
+//EP 4 (3/3)
+int roll = 0;
+int attempts = 0;
+
+Random RNG = new Random();
+
+Console.WriteLine("Press Enter to Roll a Dice:");
+
+while (roll!=6)
+{
+    Console.ReadKey();
+    roll = RNG.Next(1,7);
+    Console.WriteLine("You rolled: " + roll);
+    attempts++;
+}
+
+Console.WriteLine("You GOT 6 in "+attempts+" attempts");
+
+//EP 4 Exercise
+int roll1 = 0;
+int roll2 = 1;
+int attempts = 0;
+
+Random RNG = new Random();
+
+Console.WriteLine("Press Enter to Roll a Dice:");
+
+while (roll1!=roll2)
+{
+    Console.ReadKey();
+    roll1 = RNG.Next(1,7);
+    roll2 = RNG.Next(1,7);
+    Console.WriteLine("Rolled: " + roll1 + "\nRolled: " + roll2 + "\n");
+    attempts++;
+}
+
+Console.WriteLine("You GOT same kind on both Dice in "+attempts+" attempts");
+
+//Wait before closing
+Console.ReadKey();

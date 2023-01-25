@@ -1,0 +1,85 @@
+internal class main 
+{
+    //EP 5 (3/3)    
+        
+    void Show(List<string> x )
+        {
+            for (int i = 0; i < x.Count; i++)
+            {
+                Console.WriteLine(x[i]);
+            }
+        }
+            
+Method Main 
+    {
+        // EP 5 (1/3)
+
+        string[] movies = {"Lord of The Rings","Fight club","Interstellar","Gladiator"};
+
+        for (int i = 0; i < movies.Length; i++)
+        {
+            int rank = i + 1;
+            Console.WriteLine(rank + " " +movies[i]);
+        }
+        
+        //EP 5 (2/3)
+
+        string[] movies = new string[4];
+
+        Console.WriteLine("Enter 4 Movie names you love: ");
+
+        for (int i = 0; i < movies.Length; i++)
+        {
+            movies[i] = Console.ReadLine();
+        }
+
+        Array.Sort(movies);
+
+        Console.WriteLine("\nHere they are alphabatically");
+        
+        
+        for (int i = 0; i < movies.Length; i++)
+        {
+            Console.WriteLine(movies[i]);
+        }
+
+        //EP 5 (3/3)  
+
+        List<string> shoppingList = new List<string>();
+
+        shoppingList.Add("Dreams");
+        shoppingList.Add("Miracles");
+        shoppingList.Add("Skills");
+        shoppingList.Add("Memory Power");    
+
+        Show(shoppingList);
+
+        shoppingList.Remove("Miracles");
+        shoppingList.RemoveAt(2);
+
+        Console.WriteLine("--------------");
+
+        Show(shoppingList);
+
+        //EP 5 Exercise
+
+        Console.WriteLine("Enter the Number of Student: ");
+        int size = Convert.ToInt32(Console.ReadLine());
+
+        List<string> students = new List<string>();
+        
+        Console.WriteLine("Start Entering Student names");
+        for (int i = 0; i < size; i++)
+        {
+            string name = Console.ReadLine();
+            students.Add(name);
+        }
+
+        students.Sort();
+
+        Console.WriteLine("\nStudents name Aplhabatically");
+        Show(students);
+    }
+    //Wait before closing
+    Console.ReadKey();
+}

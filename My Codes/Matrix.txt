@@ -1,0 +1,99 @@
+// NOTE:- this proram was built to performa sum , multiplication and transpose of two matrix the logic implemented was correct although c# syntax doesn't suit it wel try to implement this logic in c++ it might work but it requires some chnages maybe
+
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static int[,] Input2D(int r,int c)
+        {
+            int[,] array = new int[r,c];
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    Console.WriteLine("Enter value for row "+(i+1)+" and Column "+(j+1));
+                    array[i,j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            return array;
+        }
+        static int[,] transpose(int[,] array)
+        {
+            int[,] array2 = new int[10,10];
+            for (int i = 0; i < array.GetLength(1); i++)
+            {
+                for (int j = 0; j < array.GetLength(0); j++)
+                {
+                     array2[j,i] = array[i,j];
+                }
+            }
+            return array;
+        }
+
+        static int[,] Sum(int[,] array,int[,] array2)
+        {
+            int[,] array3 = new int[array.GetLength(0),array.GetLength(1)];
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    array3[i,j] = array[i,j] + array2[j,i];
+                }
+                Console.WriteLine("");
+            }
+            return array3;
+        }
+
+        static int[,] Mult(int[,] array,int[,] array2)
+        {
+            int[,] array3 = new int[10,10];
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    array3[i,j] += array[i,j] * array2[j,i];
+                }
+                Console.WriteLine("");
+            }
+            return array3;
+        }
+
+        static void Print2D(int[,] array)
+        {
+            Console.WriteLine("Here's the Matrix");
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i,j]+"  ");
+                }
+                Console.WriteLine("");
+            }
+        }
+        
+        static void Main(string[] args)
+        {   
+            //Multi Dimentional Array (3/4)
+            //Write a Program that takes a matrix of order r*c from the user and computes the transpose of the matrix.
+            
+            Console.WriteLine("Enter amount of Rows for Matrix:");
+            int R = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter amount of Colmuns for Matrix:");
+            int C = Convert.ToInt32(Console.ReadLine());
+
+            int[,] array2d = Input2D(R,C);
+            Print2D(array2d);
+            int[,] array = Input2D(2,1);
+            Print2D(array);
+            array2d = Sum(array2d,array);
+            Print2D(array2d);
+
+
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

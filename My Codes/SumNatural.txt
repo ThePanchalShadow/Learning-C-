@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        static int sum(int n)
+        {
+            if(n!=0){
+                return n = n + sum(n-1);
+            }else{
+                return n;
+            }
+        }
+        static void Main(string[] args)
+        {
+            ////Recursion (1/4)
+            //Sum of N natural numbers using recurrsion
+
+            Console.WriteLine("Enter a positive Integer: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int Sum = sum(n);
+
+            Console.WriteLine("Sum of "+n+" numbers is "+ Sum);
+
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}

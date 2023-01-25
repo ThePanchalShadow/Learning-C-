@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+namespace Program // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {   
+        
+        
+        static void Main(string[] args)
+        {   
+            //String (4/10)
+            //Write a Program to Find the Length of a String entered by user
+            Console.WriteLine("Enter a String and We'll tell ypu it's Lenght: ");
+            string? test = Console.ReadLine();
+            int size = test.Length;
+
+            Console.WriteLine("Size/Lenghth of your String is: "+size);
+            //wait before closing
+            Console.ReadKey();
+        }
+    }
+}
